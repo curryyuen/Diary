@@ -22,9 +22,9 @@ int main()
         cout << " enter a valid number:";
         cin >> status ;
       }
-      if (status = 0)
+      if (status == 0)
         discount = 4000;
-      else if (status = 1)
+      else if (status == 1)
         discount = 3000;
       
       cout << "input your no. of kid:";
@@ -59,7 +59,7 @@ int main()
     else if ( money > 90000){
         ci = 45000 *0.02 + 45000*0.07 + (money - 90000)*0.12;
     }
-    cout << "you have to pay"<< ci <<  endl;
+    cout << "you have to pay $"<< ci <<  endl;
       
       
       cout << "input if you want to do again?(no:0 , yes:1)" ;
