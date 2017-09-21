@@ -20,7 +20,7 @@ int main()
         cin >> status ;
       }
       
-      cout << "input your no. of kid:"
+      cout << "input your no. of kid:";
       cin >> kid;
       while ( kid<0){
         cout << " enter a valid number:";
@@ -34,7 +34,7 @@ int main()
         cin >> cd ;
       }
       
-      cout << "input if you want to do again?(no:0 , yes:1)" 
+      cout << "input if you want to do again?(no:0 , yes:1)" ;
       cin >> ans;
       while ( ans !=0 && ans != 1){
         cout << "enter a valid number:";
