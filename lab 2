@@ -3,7 +3,8 @@
 using namespace std;
 
 int main()
-{
+{   
+    int income, status, kid , cd, ans;
 
     cout << " input your income:" ;
     cin >> income ;
