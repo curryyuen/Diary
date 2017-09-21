@@ -2,17 +2,12 @@
 
 using namespace std;
 
-int calculation (int income, int status, int kid , int cd , int allow) {
-    allow = kid * discount;
-    money = income - allow - cd;
+
     
-
-
-
 
 int main()
 {   
-    int income, status, kid , cd, ans, discount;
+    double income, status, kid , cd, ans, discount, allow, ci ;
 
     cout << " input your income:" ;
     cin >> income ;
@@ -46,7 +41,21 @@ int main()
         cin >> cd ;
       }
       
-      output = calculation (income, status, kid , cd)  // start calculation 
+      allow = kid * discount;
+    money = income - allow - cd;
+    if (money <0){
+        cout<< " you do not have to pay for the tax"<< endl;
+    }
+    else if (money <= 45000){
+        ci = money * 0.02;
+    }
+    else if (money >= 45000 && money <= 90000 ){
+        ci =  45000 *0.02 + (money - 45000)* 0.07; 
+    }
+    else if ( money > 90000){
+        ci = 45000 *0.02 + 45000*0.07 + (money - 90000)*0.12;
+    }
+    cout << "you have to pay"<< ci <<  endl;
       
       
       cout << "input if you want to do again?(no:0 , yes:1)" ;
