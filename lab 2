@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {   
-    double income, status, kid , cd, ans, discount, allow, ci ;
+    double income, status, kid , cd, ans, discount, allow, ci, money ;
 
     cout << " input your income:" ;
     cin >> income ;
