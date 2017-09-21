@@ -42,7 +42,11 @@ int main()
       }
       
       allow = kid * discount;
+      
     money = income - allow - cd;
+    cout << " net chargeable ="<<money<< endl;
+    cout << " allowance ="<< allow << endl;
+    cout << " CD= " << cd<< endl;
     if (money <0){
         cout<< " you do not have to pay for the tax"<< endl;
     }
