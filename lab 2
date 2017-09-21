@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    cout << " input your income:" ;
+    cin >> income ;
+    while (income <0){
+      cout << " enter a valid number:";
+      cin >>income ;
+    }
+      
+      cout << "input your Marital status(0 for single, 1 for married):" ;
+      cin >> status;
+      while ( status !=0 && status !=1 ){
+        cout << " enter a valid number:";
+        cin >> status ;
+      }
+      
+      cout << "input your no. of kid:"
+      cin >> kid;
+      while ( kid<0){
+        cout << " enter a valid number:";
+        cin >> kid ;
+      }
+      
+      cout << "input your claimed deduction:" ;
+      cin >> cd;
+      while ( cd<0){
+        cout << " enter a valid number:";
+        cin >> cd ;
+      }
+      
+      cout << "input if you want to do again?" 
+      cin >> status;
+      while ( status !=0 && status !=1 ){
+        cout << " enter a valid number:";
+        cin >> status ;
+      }
+      
+    return 0;
+}
