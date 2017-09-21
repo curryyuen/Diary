@@ -52,14 +52,17 @@ int main()
     }
     else if (money <= 45000){
         ci = money * 0.02;
+        cout << "you have to pay $"<< ci <<  endl;
     }
     else if (money >= 45000 && money <= 90000 ){
-        ci =  45000 *0.02 + (money - 45000)* 0.07; 
+        ci =  45000 *0.02 + (money - 45000)* 0.07;
+        cout << "you have to pay $"<< ci <<  endl;
     }
     else if ( money > 90000){
         ci = 45000 *0.02 + 45000*0.07 + (money - 90000)*0.12;
+        cout << "you have to pay $"<< ci <<  endl;
     }
-    cout << "you have to pay $"<< ci <<  endl;
+    
       
       
       cout << "input if you want to do again?(no:0 , yes:1)" ;
