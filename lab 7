@@ -1,0 +1,87 @@
+/*
+ * Lab7.cpp
+ *
+ *  Created on: 31 Oct 2017
+ *      Author: karsonlee
+ */
+#include <iostream> /* File: filecopy.cpp */
+#include <fstream>
+using namespace std;
+
+int word=0;
+
+
+void space(ifstream &ifs, ofstream &cout)
+{
+	bool flag =0;
+
+	char c; ifs.get(c); // Try to get the first char
+		while (!ifs.eof()) // Check if EOF is reached
+		{
+			switch (c)
+			{
+				case '.':
+				case '"':
+				case '\'':
+				case ',':
+				case '-':
+				case '_':
+				case '<':
+				case '>':
+				case '(':
+				case ')':
+				case '!':
+				case '?':
+				case '\\':
+				case ';':
+				case ':':
+				c=' ';
+				break;
+			}
+			if ((c<='Z')&&(c!=' '))
+				c+=32;
+			if ((c==' ')&&(flag ==1))
+				{flag = 0;
+				word++;
+				}
+			else
+				flag =1;
+		if (c!=' ')
+			cout.put(c); // Copy one char at a time
+		if ((c==' ')&&(flag ==0))
+			cout<<endl;
+			ifs.get(c);
+							// Try to get the next char
+		}
+
+}
+
+int main()
+{
+	string a;
+	string s("_lower.txt");
+	cout << "Enter the input filename: "; cin >> a;
+	s = a + s;
+	a=a+".txt";
+	ifstream ifs(a); // One way to create a fstream object
+	if (!ifs)
+	{ cerr << "Error: Can't open \"" << a << "\"\n"; return -1; }
+
+	ofstream ofs; ofs.open(s); // Another way to create a fstream object
+
+	ofstream cout;
+	cout.open(s);
+
+	ifstream temp;
+	temp.open(a);
+
+	space(temp,ofs);
+	cout<<"text size : "<<word<<endl;
+	space(ifs,cout);
+
+	ifs.close(); return 0; // Close input/output file streams
+
+}
+
+
+
