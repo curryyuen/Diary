@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int p1, p2;
+  cout << "Let's play Banana Bonanza!" <<endl;
+  cout << "Rule: Blade cuts Banana, Bomb blasts Blade, but Banana disables Bomb." << endl;
+  cout <<  "Please enter the number."<< endl<< "blade = 1, banana = 2, bomb = 3"<< endl;
+  cout << "player one choose your weapon:"<< endl;
+
+while (true) {
+    cin >> p1;
+    if (p1 != 1 && p1 != 2 && p1 != 3){
+      cout << "type again"<< endl;
+    }
+    else 
+      break;
+  }
+  
+  cout << "player two choose your weapon:"<< endl;
+  while (true) {
+    cin >> p2;
+    if (p2 != 1 && p2 != 2 && p2 != 3){
+      cout << "type again"<< endl;
+    }
+    else 
+      break;
+  }
+  
+   
+    if (p1 == 2 && p2 == 1 || p1 == 1 && p2 == 3 || p1 == 3 && p2 == 2 ) 
+    cout << "player 1 wins"<< endl;
+  else if (p1 == 1 && p2 == 2 || p1 == 3 && p2 == 1 ||  p1 == 2 && p2 == 3)
+    cout << "player 2 wins"<< endl;
+  else if (p1 == 1 && p2 == 1 || p1 == 2 && p2 == 2 || p1 ==3 && p2 == 3)
+    cout << "Draw" << endl;
+    
+ 
+  cout << "player one uses " << p1 <<"." << endl<< "player two uses " << p2 << "."<< endl; 
+  
+}
